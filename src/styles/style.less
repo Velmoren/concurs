@@ -221,5 +221,102 @@
         }
       }
     }
+
+    // TEAM
+    .team {
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+      &-item {
+        &__quote {
+          padding: 25px 50px 25px 75px;
+          position: relative;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 27px;
+
+          &::after,
+          &::before {
+            font-weight: 700;
+            font-size: 92px;
+            line-height: 60px;
+            background: linear-gradient(90deg, #FFE98D 0%, #FBBC00 99.99%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'Segoe UI';
+            position: absolute;
+          }
+
+          &::after {
+            content: "«";
+            left: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+          }
+
+          &::before {
+            content: "»";
+            right: 0;
+            bottom: 0;
+          }
+
+          @media (max-width: 768px) {
+            padding: 25px 40px 25px 50px;
+            margin-bottom: 25px;
+
+            &::after,
+            &::before {
+              font-weight: 700;
+              font-size: 70px;
+              line-height: 50px;
+            }
+          }
+        }
+
+        &__description {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+          &-img {
+            flex-basis: 155px;
+            min-width: 155px;
+            margin-right: 15px;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          &-text {
+            flex-grow: 1;
+          }
+
+          &-title {
+            font-weight: 600;
+            font-size: 27px;
+            line-height: 36px;
+            color: @main;
+          }
+
+          &-subtitle {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+            color: @secondary;
+          }
+
+          @media (max-width: 768px) {
+            flex-direction: column;
+
+            &-img {
+              margin-bottom: 25px;
+            }
+          }
+        }
+      }
+    }
   }
 }
